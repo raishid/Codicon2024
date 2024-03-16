@@ -6,7 +6,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
+import Chat from '@/components/Chat'
 function App() {
 
   return (

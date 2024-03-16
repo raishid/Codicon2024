@@ -1,10 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import Pusher from 'pusher-js';
 import './index.css'
+import { RouterProvider } from 'react-router-dom';
+import Routes from '@/RouterProvider.tsx'
+
+declare global {
+  interface Window {
+    Pusher: typeof Pusher;
+  }
+}
+window.Pusher = Pusher;
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <RouterProvider router={Routes()} />
 )
