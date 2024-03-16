@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ChatHistoryController;
+use App\Http\Controllers\StreamController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+
+Route::get('/streams', [StreamController::class, 'index'])->name('stream.index');
+Route::get('/stream/{stream}', [StreamController::class, 'show'])->name('stream.show');
+Route::post('/stream/{stream}/chat', [ChatHistoryController::class, 'store'])->name('stream.chat.store');
