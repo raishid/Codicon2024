@@ -1,3 +1,4 @@
+import { ponentesSabado, ponentesViernes, regalos, sponsors } from "./App.constant"
 import "./App.css"
 
 function App() {
@@ -48,236 +49,112 @@ function App() {
                         <p className="eventos__fecha">Viernes 22 de Marzo</p>
 
                         <div className="eventos__grid">
-                            <div className="evento">
-                                <p className="evento__hora">10:00am - 10:55am</p>
+                            {
+                                ponentesViernes.map(ponente => (
+                                    <div className="evento">
+                                        <p className="evento__hora">{ponente.hora}</p>
 
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
+                                        <div className="evento__informacion">
+                                            <h4 className="evento__nombre">{ponente.title}</h4>
+                                            <p className="evento__introduccion">{ponente.description}</p>
 
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
+                                            <div className="evento__autor-info">
+                                                <img src={ponente.imagen} className="evento__imagen-autor" alt="Imagen Ponente" />
+
+                                                <p className="evento__autor-nombre">{ponente.name}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">11:00am - 11:55am</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">1:00pm - 1:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">2:00pm - 2:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">3:00pm - 3:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">4:00pm - 4:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">5:00pm - 5:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">6:00pm - 6:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">TypeScript en React</h4>
-                                    <p className="evento__introduccion">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum mollitia alias ratione id aliquam similique cupiditate quis quod facilis aut, nisi molestiae sit, exercitationem sed odit incidunt corporis, dolores at?</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Alba Castro</p>
-                                    </div>
-                                </div>
-                            </div>
+                                ))
+                            }
                         </div> {/* Cierre de eventos__grid */}
 
                         <p className="eventos__fecha">Sábado 23 de Marzo</p>
 
                         <div className="eventos__grid">
-                            <div className="evento">
-                                <p className="evento__hora">10:00am - 10:55am</p>
+                            {
+                                ponentesSabado.map(ponente => (
+                                    <div className="evento">
+                                        <p className="evento__hora">{ponente.hora}</p>
 
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
+                                        <div className="evento__informacion">
+                                            <h4 className="evento__nombre">{ponente.title}</h4>
+                                            <p className="evento__introduccion">{ponente.description}</p>
 
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
+                                            <div className="evento__autor-info">
+                                                <img src={ponente.imagen} className="evento__imagen-autor" alt="Imagen Ponente" />
+
+                                                <p className="evento__autor-nombre">{ponente.name}</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">11:00am - 11:55am</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">1:00pm - 1:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">2:00pm - 2:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">3:00pm - 3:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">4:00pm - 4:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">5:00pm - 5:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="evento">
-                                <p className="evento__hora">6:00pm - 6:55pm</p>
-
-                                <div className="evento__informacion">
-                                    <h4 className="evento__nombre">Python: El nuevo estandar para la programación en Backend</h4>
-                                    <p className="evento__introduccion">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat mollitia praesentium officia. Suscipit neque perferendis quos voluptatem debitis fuga aliquam voluptate incidunt alias iusto ipsam atque et expedita, quam quo.</p>
-
-                                    <div className="evento__autor-info">
-                                        {/* <img className="evento__imagen-autor" loading="lazy" width="200" height="300" src="/img/speakers/imagen.png" alt="Imagen Ponente"></img> */}
-                                        <p className="evento__autor-nombre">Orlando Sánchez</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>  {/* Cierre de eventos__grid */}
+                                ))
+                            }
+                        </div> {/* Cierre de eventos__grid */}
                     </div>
                 </main>
+                <section className="contenedor-md">
+                    <div className="sponsors__grid">
+                        {
+                            sponsors.map(sponsor => (
+                                <div className="sponsors__contenido">
+                                    <a href="/">
+                                        <img src={sponsor.imagen} alt="" className="sponsors__imagen"/>
+                                    </a>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </section>
+                <section>
+                    <div className="contenedor">
+                        <h4 className="heading">Premios</h4>
+                        <p className="descripcion">Sortearemos distintos premios en cada una de nuestras conferencias</p>
+
+                        <div className="regalos">
+                            {
+                                regalos.map(regalo => (
+                                    <div className="regalos__contenedor">
+                                        <p className="regalos__contenido">{regalo.regalo}</p>
+                                    </div>
+                                ))
+                            }
+
+                        </div>
+                    </div>
+                </section>
+                <footer className="footer">
+                    <div className="footer__grid contenedor">
+                        <div className="footer__contenido">
+                            <h3 className="footer__logo logo">&#60;TitanScript&#62;</h3>
+
+                            <p className="footer__texto">DevWebCamp es una conferencia para desarrolladores de todos los niveles, se lleva a cabo de forma presencial y en línea.</p>
+                        </div>
+
+                        <nav className="menu-redes">
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://facebook.com/C%C3%B3digo-Con-Juan-103341632130628">
+                                <span className="menu-redes__ocultar">Facebook</span>
+                            </a> 
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://twitter.com/codigoconjuan">
+                                <span className="menu-redes__ocultar">Twitter</span>
+                            </a> 
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://youtube.com/codigoconjuan">
+                                <span className="menu-redes__ocultar">YouTube</span>
+                            </a> 
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://instagram.com/codigoconjuan">
+                                <span className="menu-redes__ocultar">Instagram</span>
+                            </a> 
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://tiktok.com/@codigoconjuan">
+                                <span className="menu-redes__ocultar">Tiktok</span>
+                            </a> 
+                            <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://github.com/codigoconjuan">
+                                <span className="menu-redes__ocultar">Github</span>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <p className="footer__copyright">TitanScript <span className="footer__copyright-regular"> - Todos los Derechos Reservados</span></p>
+                </footer>
             </body>
         </>
     )
