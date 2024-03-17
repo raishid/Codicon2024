@@ -15,6 +15,7 @@ class ChatHistory extends Model
         'stream_id',
         'message',
         'user_id',
+        'username',
     ];
 
     protected $cats = [
