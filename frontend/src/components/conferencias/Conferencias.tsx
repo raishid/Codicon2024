@@ -1,17 +1,18 @@
 import { Link } from "react-router-dom"
 
-export const Conferencias = ({streams}:any) => {
+export const Conferencias = ({ streams }: any) => {
     return (
         <>
-            {
-                streams?.length &&
-                streams?.map((streams:any,i:number) => (
-                    <section key={i}>
-                        <p className="eventos__fecha">{streams.start_date}</p>
-                        <div className="eventos__grid">
+            <div className="eventos__grid">
+
+                {
+                    streams?.length &&
+                    streams?.map((streams: any, i: number) => (
+                        <section key={i}>
+                            <p className="eventos__fecha">{streams.start_date}</p>
                             <Link
-                                to={"/event/"+streams.id}
-                                key={i} 
+                                to={"/event/" + streams.id}
+                                key={i}
                                 className="evento">
                                 <p className="evento__hora">{streams.hora}</p>
 
@@ -26,10 +27,11 @@ export const Conferencias = ({streams}:any) => {
                                     </div>
                                 </div>
                             </Link>
-                        </div>
-                    </section>
-                ))
-            }
+                        </section>
+                    ))
+                }
+            </div>
+
         </>
     )
 }
