@@ -10,5 +10,6 @@ export const socket = () => {
     encrypted: false,
     forceTLS: false,
     disableStats: true,
+    authEndpoint: import.meta.env.VITE_SOCKET_AUTH_ENDPOINT,
   })
 }

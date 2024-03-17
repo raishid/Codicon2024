@@ -33,7 +33,7 @@ class StreamSendMessage implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new Channel('stream-' . $this->message->stream_id),
+            new PresenceChannel('stream.' . $this->message->stream_id),
         ];
     }
 }
