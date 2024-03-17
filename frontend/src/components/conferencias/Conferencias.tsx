@@ -1,35 +1,31 @@
-import { conferencias } from "@/App.constant"
 import { Link } from "react-router-dom"
 
-export const Conferencias = () => {
+export const Conferencias = ({streams}:any) => {
     return (
         <>
             {
-                conferencias.map((conferencia,i) => (
+                streams?.length &&
+                streams?.map((streams:any,i:number) => (
                     <section key={i}>
-                        <p className="eventos__fecha">{conferencia.date}</p>
+                        <p className="eventos__fecha">{streams.start_date}</p>
                         <div className="eventos__grid">
-                            {
-                                conferencia.ponentes.map((ponente,i) => (
-                                    <Link
-                                        to={"/event/ejemplo"}
-                                        key={i} 
-                                        className="evento">
-                                        <p className="evento__hora">{ponente.hora}</p>
+                            <Link
+                                to={"/event/"+streams.id}
+                                key={i} 
+                                className="evento">
+                                <p className="evento__hora">{streams.hora}</p>
 
-                                        <div className="evento__informacion">
-                                            <h4 className="evento__nombre">{ponente.title}</h4>
-                                            <p className="evento__introduccion">{ponente.description}</p>
+                                <div className="evento__informacion">
+                                    <h4 className="evento__nombre">{streams.name}</h4>
+                                    <p className="evento__introduccion">{streams.description}</p>
 
-                                            <div className="evento__autor-info">
-                                                <img src={ponente.imagen} className="evento__imagen-autor" alt="Imagen Ponente" />
+                                    <div className="evento__autor-info">
+                                        <img src={streams.poster_url} className="evento__imagen-autor" alt="Imagen Ponente" />
 
-                                                <p className="evento__autor-nombre">{ponente.name}</p>
-                                            </div>
-                                        </div>
-                                    </Link>
-                                ))
-                            }
+                                        <p className="evento__autor-nombre">{streams.name}</p>
+                                    </div>
+                                </div>
+                            </Link>
                         </div>
                     </section>
                 ))

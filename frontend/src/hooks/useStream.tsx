@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 
 
 export const useStreams = () => {
-  const [stream, setStream] = useState(null);
+  const [stream, setStream] = useState([]);
 
   useEffect(() => {
-    fetch(`${import.meta.env.API_URL}/streams`)
+    fetch(`${import.meta.env.VITE_API_URL}/streams`)
       .then(res => res.json())
       .then(data => setStream(data))
   }, [])
@@ -14,9 +14,9 @@ export const useStreams = () => {
 }
 
 export function useGetStream(id: string) {
-  const [stream, setStream] = useState(null);
+  const [stream, setStream] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     fetch(`${import.meta.env.VITE_API_URL}/stream/${id}`, {
