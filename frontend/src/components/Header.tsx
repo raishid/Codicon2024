@@ -18,8 +18,8 @@ export const Header = () => {
                     <p className="header__texto header__modalidad">En Línea - Presencial</p>
 
                     <div className="header__navegacion">
-                        <a href="/paquetes" className="boton">Comprar Pase</a>
-                        <a href="/shop" className="boton">Paquetes</a>
+                        <a href="/shop" className="boton">Comprar Pase</a>
+                        <a href="/paquetes" className="boton secundario">Paquetes</a>
                     </div>
                 </div>
             </div>

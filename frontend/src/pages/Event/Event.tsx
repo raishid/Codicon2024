@@ -1,5 +1,4 @@
 import { Message } from "@@/Message/Message"
-import { IoSend } from "react-icons/io5";
 
 export const Event = () => {
   return (
@@ -39,7 +38,6 @@ export const Event = () => {
           <section className="flex justify-center items-center bg-slate-900 px-6 py-4 gap-4 rounded-b-lg">
             <textarea className="w-full border-[#1E293B] p-2 focus:border-white border-2 h-[60px] rounded-b-lg" placeholder="Enviar un mensaje"></textarea>
             <button className="!bg-transparent">
-              <IoSend className="text-white text-3xl !p-0 !w-auto" />
             </button>
           </section>
 

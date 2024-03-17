@@ -31,7 +31,7 @@ export const Footer = () => {
                 </nav>
             </div>
 
-            <p className="footer__copyright">TitanScript <span className="footer__copyright-regular"> - Todos los Derechos Reservados</span></p>
+            <p className="footer__copyright">TitanScript <span className="footer__copyright-regular"> - Todos los Derechos Reservados 2024 &copy;</span></p>
         </footer>
     )
 }

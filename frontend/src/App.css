@@ -19,13 +19,14 @@ html {
     /* Colores */
     --negro: #1a1b15;
     --blanco: #ffffff;
+    --blanco-oscuro: #e0e0e0;
     --gris: #64748B;
     --gris-claro: #F8FAFC;
     --gris-oscuro: #1E293B;
     --azul: #007df4;
     --azul-oscuro: #0066c5;
-    --turquesa: #00c8c2;
-    --turquesa-oscuro: #00a59f;
+    --morado: #ae00ff;
+    --morado-oscuro: #9000d2;
     --rojo: #a90000;
     --verde: #02db02;
 }
@@ -110,7 +111,7 @@ img {
 /* Utilidades */
 
 .texto-degradado{
-    background: linear-gradient(to right, var(--azul), var(--turquesa));
+    background: linear-gradient(to right, var(--azul), var(--morado));
     background-clip: text;
     color: transparent;
 }
@@ -129,6 +130,14 @@ img {
     font-weight: var(--delgada);
     color: var(--gris-oscuro);
     margin-bottom: 5rem;
+}
+
+.secundario{
+    background-color: var(--morado);
+}
+
+.secundario:hover{
+    background-color: var(--morado-oscuro);
 }
 
 
@@ -386,25 +395,32 @@ img {
 .sponsors__grid{
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .sponsors__grid{
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 .sponsors__contenido{
-    width: 30rem;
-    height: 20rem;
+    width: 15rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     border: solid 1px transparent;
     border-radius: 1rem;
     transition: all .3s ease-in-out;
     margin: 8rem auto 0 auto;
+}
+
+@media (min-width: 768px) {
+    .sponsors__contenido{
+        width: 30rem;
+        height: 20rem;
+    }
 }
 
 .sponsors__contenido:hover{
@@ -434,7 +450,7 @@ margin: 0 auto;
 }
 
 .regalos__contenedor:hover{
-    background-color: var(--azul-oscuro);
+    background-color: var(--morado);
     cursor: crosshair;
 }
 
@@ -496,6 +512,7 @@ margin: 0 auto;
 
 .footer__copyright-regular{
     font-weight: var(--regular);
+    font-size: 1.8rem;
 }
 
 /* footer redes sociales */
@@ -515,6 +532,11 @@ margin: 0 auto;
 
 .menu-redes__enlace{
     font-size: 3rem;
+    transition: all .3s ease-in-out;
+}
+
+.menu-redes__enlace:hover{
+    color: var(--blanco-oscuro);
 }
 
 
