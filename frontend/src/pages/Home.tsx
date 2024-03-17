@@ -1,6 +1,7 @@
 import { Premios } from "@@/Premios/Premios"
 import { Sponsors } from "@@/Sponsors/Sponsors"
 import { Conferencias } from "@@/conferencias/Conferencias"
+import { Modal } from "@@/Modal"
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       </main>
       <Sponsors />
       <Premios />
+      <Modal />
     </>
   )
 }
