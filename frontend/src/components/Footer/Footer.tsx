@@ -10,23 +10,23 @@ export const Footer = () => {
                 </div>
 
                 <nav className="menu-redes">
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://facebook.com/C%C3%B3digo-Con-Juan-103341632130628">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-facebook"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://facebook.com">
+                        <i className="fa-brands fa-facebook"></i>
                     </a>
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://twitter.com/codigoconjuan">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-x-twitter"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://linkedin.com">
+                        <i className="fa-brands fa-linkedin"></i>
                     </a>
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://youtube.com/codigoconjuan">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-youtube"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://youtube.com">
+                        <i className="fa-brands fa-youtube"></i>
                     </a>
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://instagram.com/codigoconjuan">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-instagram"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://instagram.com">
+                        <i className="fa-brands fa-instagram"></i>
                     </a>
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://tiktok.com/@codigoconjuan">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-tiktok"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://tiktok.com">
+                        <i className="fa-brands fa-tiktok"></i>
                     </a>
-                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://github.com/codigoconjuan">
-                        <span className="menu-redes__ocultar"><i className="fa-brands fa-github"></i></span>
+                    <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://github.com">
+                        <i className="fa-brands fa-github"></i>
                     </a>
                 </nav>
             </div>
