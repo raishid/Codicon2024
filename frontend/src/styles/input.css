@@ -2,6 +2,7 @@ form{
     margin: 30px 0;
     .field{
         margin: 10px 0;
+        width: 500px;
         label{
             width: 100%;
         }
@@ -9,12 +10,17 @@ form{
             width: 100%;
             padding: 10px;
             margin-top: 5px ;
-            border: 2px solid var(--main-color);   
+            border: 2px solid var(--color-buttons);   
+            border-radius: var(--main-radius);
             &:focus-visible{
                 outline-color: var(--main-hover-color);
             }
         }
-        span{
+        div{
+            margin-top: 10px;
+            padding: var(--main-padding);
+            border-left: 2px solid var(--error-color);
+            background-color: var(--error-bg-color);
             color: var(--error-color);
         }
     }

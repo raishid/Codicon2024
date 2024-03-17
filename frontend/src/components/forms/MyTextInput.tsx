@@ -20,8 +20,8 @@ export const MyTextInput = ( { label, ...props }: Props ) => {
                 { ...field } 
                 { ...props } 
             />
+            <ErrorMessage name={ props.name } component="div" />
 
-            <ErrorMessage name={ props.name } component="span" />
         </div>
     )
 }

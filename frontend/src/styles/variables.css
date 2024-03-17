@@ -1,6 +1,6 @@
 :root {
-    --main-color: #FF5C00;
-    --main-hover-color: #FFAA46;
+    --main-color: var(--azul);
+    --main-hover-color: var(--azul);
     --main-padding: 10px 14px;
     --main-font-size: 16px;
     --main-radius: 6px;
@@ -14,6 +14,8 @@
     --border-buttons: #000;
 
     /* Inputs */
-    --error-color: #F11C1C;
+    --color-buttons: #CCD3DA;
+    --error-bg-color: #FEDCDB;
+    --error-color: #A80003;
 }
 

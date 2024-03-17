@@ -1,14 +1,34 @@
 import { create } from 'zustand'
+// import { persist } from 'zustand/middleware'
 
-export interface EventStore{
-    bears: number
-    increasePopulation: ()=> void
-    removeAllBears: ()=> void
-    updateBears: (newBears: number)=> void
+export type Event = {
+  title: string
+  description: string,
+  author: string
 }
-export const useEventStore = create<EventStore>((set) => ({
-  bears: 0,
-  increasePopulation: () => set((state) => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 }),
-  updateBears: (newBears: number) => set({ bears: newBears }),
-}))
+
+export interface EventStore {
+    events: Event[]
+}
+export interface ActionsEventStore {
+    
+}
+
+
+export const useEventStore = create<EventStore>(
+  (set) => (
+    {
+      events: []
+    }
+  ))
+
+
+// export const useEventStore = create<EventStore>()(
+//   persist(
+//     (set) => (
+//       {
+//         events: []
+//       }
+//     ), { name: "eventStore" }
+//   )
+// )
