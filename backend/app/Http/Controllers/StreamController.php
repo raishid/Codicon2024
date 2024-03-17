@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Events\StreamLastMessage;
-use App\Http\Resources\StreamResource;
 use App\Models\Stream;
-use Illuminate\Http\Request;
+use App\Http\Requests\StreamRequest;
+use App\Http\Resources\StreamResource;
 
 class StreamController extends Controller
 {
@@ -20,19 +19,17 @@ class StreamController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StreamRequest $request)
     {
-        //
+        $data = $request->validated();
+
+        $data['user_id'] = auth()->user()->id;
+
+        $stream = Stream::create($data);
+
+        return response()->json(StreamResource::make($stream));
     }
 
     /**
@@ -44,19 +41,15 @@ class StreamController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Stream $stream)
-    {
-        //
-    }
-
-    /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Stream $stream)
+    public function update(StreamRequest $request, Stream $stream)
     {
-        //
+        $data = $request->validated();
+
+        $stream->update($data);
+
+        return response()->json(StreamResource::make($stream));
     }
 
     /**
@@ -64,6 +57,8 @@ class StreamController extends Controller
      */
     public function destroy(Stream $stream)
     {
-        //
+        $stream->delete();
+
+        return response()->json(['message' => 'Stream deleted successfully']);
     }
 }

@@ -4,16 +4,27 @@ export default function Chat({ id, messages }) {
 
   const [message, setMessage] = useState([])
 
+  const [username, setUsername] = useState('')
+
   const [newMessage, setNewMessage] = useState('')
+
+  const [onlineUsers, setOnlineUsers] = useState(0)
 
   const chatRef = useRef(null)
 
   useEffect(() => {
-    socket().channel(`stream-${id}`).listen('.App\\Events\\StreamSendMessage', (e) => {
+    const channelSucribed = socket().join(`stream.${id}`);
+    channelSucribed.here(() => {
+      setOnlineUsers(channelSucribed.subscription.members.count)
+    })
+
+    channelSucribed.listen('.App\\Events\\StreamSendMessage', (e) => {
       setMessage((prev) => [...prev, e.message])
     })
+
+    //get online users
     return () => {
-      socket().channel(`stream-${id}`).stopListening('.App\\Events\\StreamSendMessage');
+      channelSucribed.stopListening('.App\\Events\\StreamSendMessage')
     };
 
   }, [])
@@ -21,6 +32,10 @@ export default function Chat({ id, messages }) {
   useEffect(() => {
     setMessage(messages)
   }, [messages])
+
+  useEffect(() => {
+    setUsername('anon' + Math.floor(Math.random() * 1000))
+  }, [id])
 
   const sendMessage = async () => {
     await fetch(`${import.meta.env.VITE_API_URL}/stream/${id}/chat`, {
@@ -30,7 +45,8 @@ export default function Chat({ id, messages }) {
         'accept': 'application/json',
       },
       body: JSON.stringify({
-        message: newMessage
+        message: newMessage,
+        username: username,
       })
     })
 
@@ -43,13 +59,18 @@ export default function Chat({ id, messages }) {
   return (
     <aside className="bg-slate-100 min-w-[350px] min-h-[600px] float-right">
       <div className="flex flex-col justify-between h-full px-8 py-4">
+        online users: {onlineUsers}
         <div className="h-full my-2">
           {
+            message &&
             message.map((m) => (
-              <p className="mb-2" key={m.id}>
-                <span key={m.id}>
-                  {m.user_id ? '👨‍🚀' : '👽'}
-                </span>
+              <p className="mb-2 flex flex-col" key={m.id}>
+                <div>
+                  <span key={m.id}>
+                    {m.user_id ? '👨‍🚀' : '👽'}
+                  </span>
+                  <span>{m.username}</span>
+                </div>
                 {m.message}
               </p>
             ))

@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Broadcast;
 |
 */
 
-
-/* Broadcast::channel('stream-{id}-room', function ($user) {
+Broadcast::channel('stream.{id}', function () {
     return true;
 });
- */
