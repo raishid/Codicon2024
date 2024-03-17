@@ -22,8 +22,8 @@ class StreamResource extends JsonResource
             'video_stream_url' => $this->video_stream_url,
             'status'    => boolval($this->status),
             'messages'  => $this->last_message,
-            'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
             'user'  => $this->user->name,
         ];
     }

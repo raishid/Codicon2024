@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Introducción a la Inteligencia Artificial",
+    "description": "Descubre los fundamentos de la inteligencia artificial y cómo se aplica en diferentes campos, desde la visión por computadora hasta el procesamiento del lenguaje natural.",
+    "poster_url": "https://example.com/intro_to_ai_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=abcdefghijk",
+    "status": true,
+    "start_date": "2024-03-18 10:00:00",
+    "end_date": "2024-03-18 12:00:00"
+  },
+  {
+    "name": "Desarrollo de Aplicaciones Móviles",
+    "description": "Aprende sobre las mejores prácticas y herramientas para desarrollar aplicaciones móviles modernas para iOS y Android.",
+    "poster_url": "https://example.com/mobile_app_dev_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=lmnopqrstuv",
+    "status": true,
+    "start_date": "2024-03-19 14:00:00",
+    "end_date": "2024-03-19 16:00:00"
+  },
+  {
+    "name": "Seguridad Informática: Amenazas y Soluciones",
+    "description": "Explora las últimas tendencias en seguridad informática y aprende cómo proteger tus sistemas contra ataques cibernéticos.",
+    "poster_url": "https://example.com/cybersecurity_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=vwxyz012345",
+    "status": true,
+    "start_date": "2024-03-20 09:00:00",
+    "end_date": "2024-03-20 11:00:00"
+  },
+  {
+    "name": "Blockchain: Más Allá de las Criptomonedas",
+    "description": "Descubre cómo la tecnología blockchain está transformando industrias más allá del mundo de las criptomonedas, desde la cadena de suministro hasta la atención médica.",
+    "poster_url": "https://example.com/blockchain_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=67890abcdef",
+    "status": true,
+    "start_date": "2024-03-21 13:00:00",
+    "end_date": "2024-03-21 15:00:00"
+  },
+  {
+    "name": "Desarrollo Web Avanzado con React",
+    "description": "Sumérgete en el desarrollo web avanzado utilizando React y descubre cómo construir aplicaciones web escalables y de alto rendimiento.",
+    "poster_url": "https://example.com/react_web_dev_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=defghijklm",
+    "status": true,
+    "start_date": "2024-03-22 10:00:00",
+    "end_date": "2024-03-22 12:00:00"
+  },
+  {
+    "name": "Machine Learning en la Práctica",
+    "description": "Aprende cómo implementar algoritmos de machine learning en proyectos del mundo real y obtén insights valiosos a partir de tus datos.",
+    "poster_url": "https://example.com/machine_learning_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=mnopqrstuvw",
+    "status": true,
+    "start_date": "2024-03-23 11:00:00",
+    "end_date": "2024-03-23 13:00:00"
+  },
+  {
+    "name": "UX/UI Design: Principios y Prácticas",
+    "description": "Descubre los principios fundamentales del diseño de experiencia de usuario (UX) y diseño de interfaz de usuario (UI) y aprende cómo aplicarlos en tus proyectos.",
+    "poster_url": "https://example.com/ux_ui_design_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=pqrstuvwxyz123",
+    "status": true,
+    "start_date": "2024-03-24 14:00:00",
+    "end_date": "2024-03-24 16:00:00"
+  },
+  {
+    "name": "Introducción a la Programación en Python",
+    "description": "Inicia tu viaje en la programación con Python, uno de los lenguajes más populares y versátiles en la actualidad.",
+    "poster_url": "https://example.com/python_programming_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=qrsuvwxyz456",
+    "status": true,
+    "start_date": "2024-03-25 10:00:00",
+    "end_date": "2024-03-25 12:00:00"
+  },
+  {
+    "name": "Desarrollo de Juegos con Unity",
+    "description": "Aprende a crear tus propios juegos utilizando Unity, una de las plataformas de desarrollo de juegos más populares y poderosas.",
+    "poster_url": "https://example.com/unity_game_dev_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=123456abcdef",
+    "status": true,
+    "start_date": "2024-03-26 13:00:00",
+    "end_date": "2024-03-26 15:00:00"
+  },
+  {
+    "name": "Big Data: Conceptos y Aplicaciones",
+    "description": "Descubre los conceptos fundamentales detrás del big data y cómo se aplica en diferentes industrias para tomar decisiones informadas.",
+    "poster_url": "https://example.com/big_data_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=rstuvwxyz789",
+    "status": true,
+    "start_date": "2024-03-27 11:00:00",
+    "end_date": "2024-03-27 13:00:00"
+  },
+  {
+    "name": "Desarrollo Ágil de Software",
+    "description": "Aprende sobre los principios y prácticas del desarrollo ágil de software y cómo pueden mejorar la calidad y velocidad de entrega de tu equipo.",
+    "poster_url": "https://example.com/agile_software_dev_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=uvwxyz012345",
+    "status": true,
+    "start_date": "2024-03-28 14:00:00",
+    "end_date": "2024-03-28 16:00:00"
+  },
+  {
+    "name": "Cloud Computing: Fundamentos y Servicios",
+    "description": "Descubre los fundamentos del cloud computing y explora los diferentes servicios ofrecidos por proveedores líderes en la nube.",
+    "poster_url": "https://example.com/cloud_computing_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=23456789abcdef",
+    "status": true,
+    "start_date": "2024-03-29 09:00:00",
+    "end_date": "2024-03-29 11:00:00"
+  },
+  {
+    "name": "DevOps: Cultura, Prácticas y Herramientas",
+    "description": "Aprende sobre la cultura DevOps y cómo las prácticas y herramientas pueden mejorar la colaboración y eficiencia entre equipos de desarrollo y operaciones.",
+    "poster_url": "https://example.com/devops_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=3456789abcdefg",
+    "status": true,
+    "start_date": "2024-03-30 13:00:00",
+    "end_date": "2024-03-30 15:00:00"
+  },
+  {
+    "name": "Ciberseguridad para Principiantes",
+    "description": "Una introducción al mundo de la ciberseguridad diseñada para principiantes. Aprende cómo proteger tus datos y dispositivos contra amenazas en línea.",
+    "poster_url": "https://example.com/cybersecurity_for_beginners_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=456789abcdefg",
+    "status": true,
+    "start_date": "2024-03-31 10:00:00",
+    "end_date": "2024-03-31 12:00:00"
+  },
+  {
+    "name": "Diseño Gráfico: Principios y Herramientas",
+    "description": "Explora los principios fundamentales del diseño gráfico y las herramientas más populares utilizadas por los profesionales del diseño.",
+    "poster_url": "https://example.com/graphic_design_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=56789abcdefghijkl",
+    "status": true,
+    "start_date": "2024-04-01 14:00:00",
+    "end_date": "2024-04-01 16:00:00"
+  },
+  {
+    "name": "JavaScript Avanzado: Patrones y Mejores Prácticas",
+    "description": "Domina el JavaScript moderno explorando patrones de diseño avanzados y las mejores prácticas para escribir código limpio y mantenible.",
+    "poster_url": "https://example.com/advanced_javascript_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=67890abcdefghijklm",
+    "status": true,
+    "start_date": "2024-04-02 11:00:00",
+    "end_date": "2024-04-02 13:00:00"
+  },
+  {
+    "name": "Fundamentos de Redes de Computadoras",
+    "description": "Una introducción a los fundamentos de las redes de computadoras, incluyendo protocolos, topologías y seguridad.",
+    "poster_url": "https://example.com/networking_fundamentals_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=789012abcdefghijklm",
+    "status": true,
+    "start_date": "2024-04-03 14:00:00",
+    "end_date": "2024-04-03 16:00:00"
+  },
+  {
+    "name": "Automatización de Pruebas con Selenium",
+    "description": "Aprende cómo automatizar pruebas de software utilizando Selenium WebDriver y mejora la eficiencia de tus procesos de pruebas.",
+    "poster_url": "https://example.com/selenium_testing_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=901234abcdefghijklmn",
+    "status": true,
+    "start_date": "2024-04-04 09:00:00",
+    "end_date": "2024-04-04 11:00:00"
+  },
+  {
+    "name": "Introducción al Análisis de Datos",
+    "description": "Descubre cómo analizar datos utilizando herramientas y técnicas básicas y obtén insights valiosos para la toma de decisiones.",
+    "poster_url": "https://example.com/data_analysis_poster.jpg",
+    "video_stream_url": "https://www.youtube.com/watch?v=0123456789abcdefghijklm",
+    "status": true,
+    "start_date": "2024-04-05 13:00:00",
+    "end_date": "2024-04-05 15:00:00"
+  }
+]
