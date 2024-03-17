@@ -1,4 +1,4 @@
-export const Message = () => {
+export const Message = ({message}:any) => {
     return (
         <div className="flex justify-start px-10">
 
@@ -6,9 +6,9 @@ export const Message = () => {
                 18:30
             </div>
             <div>
-                <span className="text-sky-500 mr-1">Sarah Dayan: </span>
+                <span className="text-sky-500 mr-1">{message.username}: </span>
                 <span className="text-white ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe debitis animi, voluptatibus fuga deleniti ex asperiores ipsum natus id nisi pariatur voluptate, dolorem quod, sequi repudiandae laborum vel officia qui?
+                    {message.message}
                 </span>
             </div>
         </div>

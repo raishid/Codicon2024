@@ -1,6 +1,49 @@
+import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import { Message } from "@@/Message/Message"
+import { socket } from "@/webSockets"
+import { useGetStream } from "@/hooks/useStream"
 
 export const Event = () => {
+  const params:any = useParams()
+  const {stream}:any = useGetStream(params.id)
+  const [newMessage, setNewMessage] = useState('')
+  const [messages, setMessage] = useState<any>([])
+  
+  const send = async () => {
+    await fetch(`${import.meta.env.VITE_API_URL}/stream/${params.id}/chat`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'accept': 'application/json',
+      },
+      body: JSON.stringify({
+        message: newMessage,
+        username: 'anon' + Math.floor(Math.random() * 1000),
+      })
+    })
+  }
+
+  useEffect(() => {
+    console.log({stream})
+    stream?.messages?.length && setMessage((prev:any[]) => prev.concat(stream.messages))
+    const channelSucribed = socket().join(`stream.${params.id}`);
+    // channelSucribed.here(() => {
+    //   // setOnlineUsers(channelSucribed.subscription.members.count)
+    //   console.log("channelSucribed.subscription.members.count")
+    // })
+
+    channelSucribed.listen('.App\\Events\\StreamSendMessage', (e:any) => {
+      setMessage((prev:any) => [...prev, e.message])
+    })
+
+    //get online users
+    return () => {
+      channelSucribed.stopListening('.App\\Events\\StreamSendMessage')
+    };
+
+  }, [])
+
   return (
     <>
       {/* <div className="px-28">
@@ -30,16 +73,24 @@ export const Event = () => {
           <h3 className="h-[10%] m-0 p-5 text-4xl text-white bg-slate-900 flex justify-center items-center">Chat</h3>
           <section className="h-[85%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
             {
-              Array.from({ length: 5 }, () => (
-                <Message />
+              messages?.length && 
+              messages.map((message:any, i:number) => (
+                <Message key={i} message={message}/>
               ))
             }
           </section>
           <section className="h-[5%] flex justify-center">
-            <input className="w-full p-3" type="text" placeholder="Enviar un mensaje" />
-            <button className="flex justify-center items-center rounded-none">Enviar</button>
+            <input 
+              className="w-full p-3" 
+              type="text" 
+              placeholder="Enviar un mensaje"
+              value={newMessage} onChange={(e) => setNewMessage(e.target.value)} 
+              />
+            <button 
+              className="flex justify-center items-center rounded-none"
+              onClick={send}
+              >Enviar</button>
           </section>
-
         </section>
 
       </div>
