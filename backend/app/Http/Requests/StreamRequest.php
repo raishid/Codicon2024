@@ -45,5 +45,7 @@ class StreamRequest extends FormRequest
                 'end_date'  => 'date'
             ];
         }
+
+        return [];
     }
 }
