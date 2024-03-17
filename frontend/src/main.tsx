@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import './styles/styles.ts'
+import '@fontsource-variable/outfit';
 import App from './App.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
