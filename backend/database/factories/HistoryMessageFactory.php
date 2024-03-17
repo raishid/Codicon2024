@@ -23,6 +23,7 @@ class HistoryMessageFactory extends Factory
         return [
             'stream_id' => Stream::all()->random()->id,
             'message' => fake()->sentence(4),
+            'username'  => 'anon' . fake()->unique()->numberBetween(1, 1000),
             'created_at'    => $time,
             'updated_at'    => $time
         ];

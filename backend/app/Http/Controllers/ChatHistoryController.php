@@ -32,11 +32,13 @@ class ChatHistoryController extends Controller
     {
         $request->validate([
             'message' => 'required',
+            'username' => 'required|string|max:25'
         ]);
 
         $chatHistory = ChatHistory::create([
             'message' => $request->message,
             'stream_id' => $stream->id,
+            'username'  => $request->username,
         ]);
 
         broadcast(new StreamSendMessage($chatHistory));
