@@ -24,6 +24,7 @@ class StreamResource extends JsonResource
             'messages'  => $this->last_message,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
+            'user'  => $this->user->name,
         ];
     }
 }

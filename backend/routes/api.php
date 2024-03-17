@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Auth\GenericUser;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,14 @@ Route::post('/socket/auth', function () {
 });
 
 
+Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
+Route::post('/register', [AuthController::class, 'register'])->name('auth.register');
+
 
 Route::get('/streams', [StreamController::class, 'index'])->name('stream.index');
+Route::post('/streams', [StreamController::class, 'store'])->name('stream.store')->middleware('auth:sanctum');
+Route::patch('/streams/{stream}', [StreamController::class, 'update'])->name('stream.update')->middleware('auth:sanctum');
+Route::delete('/streams/{stream}', [StreamController::class, 'destroy'])->name('stream.destroy')->middleware('auth:sanctum');
+
 Route::get('/stream/{stream}', [StreamController::class, 'show'])->name('stream.show');
 Route::post('/stream/{stream}/chat', [ChatHistoryController::class, 'store'])->name('stream.chat.store');

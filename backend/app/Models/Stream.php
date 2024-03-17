@@ -20,6 +20,8 @@ class Stream extends Model
         'video_stream_url',
         'start_date',
         'end_date',
+        'poster_url',
+        'user_id',
     ];
 
     protected $cats = [
@@ -43,5 +45,10 @@ class Stream extends Model
         return Attribute::make(function () {
             return $this->message()->take(10)->orderBy('created_at', 'desc')->get();
         });
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
