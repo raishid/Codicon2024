@@ -133,22 +133,22 @@ function App() {
 
                         <nav className="menu-redes">
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://facebook.com/C%C3%B3digo-Con-Juan-103341632130628">
-                                <span className="menu-redes__ocultar">Facebook</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-facebook"></i></span>
                             </a> 
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://twitter.com/codigoconjuan">
-                                <span className="menu-redes__ocultar">Twitter</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-x-twitter"></i></span>
                             </a> 
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://youtube.com/codigoconjuan">
-                                <span className="menu-redes__ocultar">YouTube</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-youtube"></i></span>
                             </a> 
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://instagram.com/codigoconjuan">
-                                <span className="menu-redes__ocultar">Instagram</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-instagram"></i></span>
                             </a> 
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://tiktok.com/@codigoconjuan">
-                                <span className="menu-redes__ocultar">Tiktok</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-tiktok"></i></span>
                             </a> 
                             <a className="menu-redes__enlace" rel="noopener noreferrer" target="_blank" href="https://github.com/codigoconjuan">
-                                <span className="menu-redes__ocultar">Github</span>
+                                <span className="menu-redes__ocultar"><i className="fa-brands fa-github"></i></span>
                             </a>
                         </nav>
                     </div>
