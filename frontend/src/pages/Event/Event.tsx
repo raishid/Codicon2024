@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useParams } from "react-router-dom"
 import { Message } from "@@/Message/Message"
 import { socket } from "@/webSockets"
@@ -9,6 +9,7 @@ export const Event = () => {
   const { stream }: any = useGetStream(params.id)
   const [newMessage, setNewMessage] = useState('')
   const [messages, setMessage] = useState<any>([])
+  const sectionChat = useRef(null)
 
   const send = async () => {
     await fetch(`${import.meta.env.VITE_API_URL}/stream/${params.id}/chat`, {
@@ -24,6 +25,10 @@ export const Event = () => {
     })
 
     setNewMessage('')
+
+    //scroll to down
+    //@ts-ignore
+    sectionChat.current.scrollTop = sectionChat.current.scrollHeight
   }
 
   useEffect(() => {
@@ -76,7 +81,7 @@ export const Event = () => {
         </section>
         <section className="chat w-[25%] bg-slate-800 rounded-t-3xl">
           <h3 className="h-[10%] m-0 p-5 text-4xl text-white bg-slate-900 flex justify-center items-center rounded-t-3xl">Chat</h3>
-          <section className="h-[80%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-6 pt-4">
+          <section ref={sectionChat} className="h-[80%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-6 pt-4">
             {
               messages?.length &&
               messages.map((message: any, i: number) => (
