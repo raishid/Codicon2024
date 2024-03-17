@@ -1,7 +1,7 @@
 import { Premios } from "@@/Premios/Premios"
 import { Sponsors } from "@@/Sponsors/Sponsors"
 import { Conferencias } from "@@/conferencias/Conferencias"
-import { Modal } from "@@/Modal"
+// import { Modal } from "@@/Modal"
 
 export const Home = () => {
   // const a = () => {
