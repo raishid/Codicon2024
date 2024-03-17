@@ -16,7 +16,7 @@ class StreamResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => $this->title,
+            'name' => $this->name,
             'description' => $this->description,
             'thumbnail' => $this->poster_url,
             'video_stream_url' => $this->video_stream_url,
