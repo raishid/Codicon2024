@@ -75,7 +75,7 @@ export const conferencias = [
                 title: "Arquitecturas de Microservicios: Ventajas y Desafíos",
                 description: 'Las arquitecturas de microservicios ofrecen flexibilidad y escalabilidad. Pero, ¿Cuáles son los desafíos a considerar?',
                 name: 'Giusseppe Perretti',
-                imagen: 'https://c0.wallpaperflare.com/preview/115/959/619/italy-genova-sestri-ponente-tramonto.jpg',
+                imagen: 'https://weremote.net/wp-content/uploads/2023/04/hombre-que-quiere-programar-mas-rapido.jpg',
             },
         
             {
@@ -83,7 +83,7 @@ export const conferencias = [
                 title: "Seguridad en APIs RESTful: Autenticación y Autorización",
                 description: 'Conocimientos esenciales para garantizar la seguridad en las APIs RESTful y cómo proteger tus aplicaciones contra amenazas.',
                 name: 'Hector Gallardo',
-                imagen: 'https://c0.wallpaperflare.com/preview/115/959/619/italy-genova-sestri-ponente-tramonto.jpg',
+                imagen: 'https://merida.anahuac.mx/hs-fs/hubfs/hombre-feliz-joven-con-tecnologia.jpg?width=653&height=436&name=hombre-feliz-joven-con-tecnologia.jpg',
             },
         
             {
@@ -99,7 +99,7 @@ export const conferencias = [
                 title: "Escalabilidad Horizontal vs. Vertical en Servidores",
                 description: 'Diferencias entre escalabilidad horizontal y vertical en el contexto de servidores. Discutiremos cuándo es apropiado aplicar cada enfoque y cómo afectan el rendimiento, la disponibilidad y los costos.',
                 name: 'Daniel Gonzalez',
-                imagen: 'https://c0.wallpaperflare.com/preview/115/959/619/italy-genova-sestri-ponente-tramonto.jpg',
+                imagen: 'https://cdn.gfourmis.co/wp-content/uploads/2015/10/29092645/b-interview-with-ceo-of-big-data-startup.jpg',
             },
         
             {
@@ -107,7 +107,7 @@ export const conferencias = [
                 title: "Introducción a GraphQL y su Implementación en el Backend",
                 description: 'Cómo funciona, sus ventajas sobre REST, y cómo implementarlo para crear APIs flexibles y eficientes.',
                 name: 'Jesus Falcon',
-                imagen: 'https://c0.wallpaperflare.com/preview/115/959/619/italy-genova-sestri-ponente-tramonto.jpg',
+                imagen: 'https://www.equiposytalento.com/upload/talent_noticias/004/4499/programadorweb3pasosisdits.jpg',
             },
         
             {
@@ -123,7 +123,7 @@ export const conferencias = [
                 title: "Optimización de Consultas SQL: Estrategias Avanzadas",
                 description: 'Índices, subconsultas, uso eficiente de JOINs y técnicas para reducir la carga en servidores.',
                 name: 'Froilan Estaba',
-                imagen: 'https://c0.wallpaperflare.com/preview/115/959/619/italy-genova-sestri-ponente-tramonto.jpg',
+                imagen: 'https://emprendepyme.net/wp-content/uploads/2023/03/lo-que-debes-saber-para-convertirte-en-programador.jpg',
             },
         
             {

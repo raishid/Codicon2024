@@ -17,7 +17,10 @@ export const Header = () => {
                     <p className="header__texto">Febrero 24-25 2024</p>
                     <p className="header__texto header__modalidad">En Línea - Presencial</p>
 
-                    <a href="/registro" className="boton">Comprar Pase</a>
+                    <div className="header__navegacion">
+                        <a href="/paquetes" className="boton">Comprar Pase</a>
+                        <a href="/shop" className="boton">Paquetes</a>
+                    </div>
                 </div>
             </div>
         </header>
