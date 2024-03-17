@@ -15,6 +15,7 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->uuid('stream_id');
             $table->text('message');
+            $table->string('username')->index();
             $table->unsignedBigInteger('user_id')->nullable();
 
             $table->foreign('stream_id')->references('id')->on('streams')->onDelete('cascade');
