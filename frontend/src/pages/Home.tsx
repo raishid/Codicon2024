@@ -4,8 +4,14 @@ import { Conferencias } from "@@/conferencias/Conferencias"
 import { Modal } from "@@/Modal"
 
 export const Home = () => {
+  // const a = () => {
+  //   fetch("https://stream.deladmin.xyz/api/streams")
+  //     .then(a => a.json())
+  //     .then(a => console.log({a}))
+  // } 
   return (
     <>
+    {/* <button onClick={a}>a</button> */}
       <main className="contenedor">
         <h2 className="heading">Nuevas Ponencias cada día</h2>
         <p className="descripcion">Dictadas por los mayores expertos en desarrollo web</p>
@@ -16,7 +22,7 @@ export const Home = () => {
       </main>
       <Sponsors />
       <Premios />
-      <Modal />
+      {/* <Modal /> */}
     </>
   )
 }
