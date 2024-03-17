@@ -5,11 +5,11 @@ import { socket } from "@/webSockets"
 import { useGetStream } from "@/hooks/useStream"
 
 export const Event = () => {
-  const params:any = useParams()
-  const {stream}:any = useGetStream(params.id)
+  const params: any = useParams()
+  const { stream }: any = useGetStream(params.id)
   const [newMessage, setNewMessage] = useState('')
   const [messages, setMessage] = useState<any>([])
-  
+
   const send = async () => {
     await fetch(`${import.meta.env.VITE_API_URL}/stream/${params.id}/chat`, {
       method: 'POST',
@@ -22,22 +22,24 @@ export const Event = () => {
         username: 'anon' + Math.floor(Math.random() * 1000),
       })
     })
+
+    setNewMessage('')
   }
 
   useEffect(() => {
-    stream?.messages?.length && setMessage((prev:any[]) => prev.concat(stream.messages))
-  },[stream])
+    stream?.messages?.length && setMessage((prev: any[]) => prev.concat(stream.messages))
+  }, [stream])
 
   useEffect(() => {
-    
+
     const channelSucribed = socket().join(`stream.${params.id}`);
     // channelSucribed.here(() => {
     //   // setOnlineUsers(channelSucribed.subscription.members.count)
     //   console.log("channelSucribed.subscription.members.count")
     // })
 
-    channelSucribed.listen('.App\\Events\\StreamSendMessage', (e:any) => {
-      setMessage((prev:any) => [...prev, e.message])
+    channelSucribed.listen('.App\\Events\\StreamSendMessage', (e: any) => {
+      setMessage((prev: any) => [...prev, e.message])
     })
 
     //get online users
@@ -76,21 +78,21 @@ export const Event = () => {
           <h3 className="h-[10%] m-0 p-5 text-4xl text-white bg-slate-900 flex justify-center items-center rounded-t-3xl">Chat</h3>
           <section className="h-[80%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-6 pt-4">
             {
-              messages?.length && 
-              messages.map((message:any, i:number) => (
-                <Message key={i} message={message}/>
+              messages?.length &&
+              messages.map((message: any, i: number) => (
+                <Message key={i} message={message} />
               ))
             }
           </section>
 
           <section className="flex h-[5%] justify-center items-center bg-slate-900 px-6 py-4 gap-4 rounded-b-lg">
-            <textarea 
-              className="w-full border-[#1E293B] p-2 focus:border-white border-2 h-[60px] rounded-b-lg" 
+            <textarea
+              className="w-full border-[#1E293B] p-2 focus:border-white border-2 h-[60px] rounded-b-lg"
               placeholder="Enviar un mensaje"
               value={newMessage} onChange={(e) => setNewMessage(e.target.value)} >
 
-              </textarea>
-            <button 
+            </textarea>
+            <button
               className="!bg-transparent"
               onClick={send}>
               Enviar
