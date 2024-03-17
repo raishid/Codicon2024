@@ -9,7 +9,7 @@ export const Sponsors = () => {
                         <div
                             key={i} 
                             className="sponsors__contenido">
-                            <a href="/">
+                            <a href={sponsor.url} rel="noopener noreferrer" target="_blank">
                                 <img src={sponsor.imagen} alt="" className="sponsors__imagen" />
                             </a>
                         </div>
