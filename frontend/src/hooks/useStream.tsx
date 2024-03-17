@@ -14,7 +14,7 @@ export const useStreams = () => {
 }
 
 export function useGetStream(id: string) {
-  const [stream, setStream] = useState([]);
+  const [stream, setStream] = useState();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 

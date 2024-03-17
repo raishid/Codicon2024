@@ -25,8 +25,11 @@ export const Event = () => {
   }
 
   useEffect(() => {
-    console.log({stream})
     stream?.messages?.length && setMessage((prev:any[]) => prev.concat(stream.messages))
+  },[stream])
+
+  useEffect(() => {
+    
     const channelSucribed = socket().join(`stream.${params.id}`);
     // channelSucribed.here(() => {
     //   // setOnlineUsers(channelSucribed.subscription.members.count)
