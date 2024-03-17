@@ -1,4 +1,5 @@
 import { conferencias } from "@/App.constant"
+import { Link } from "react-router-dom"
 
 export const Conferencias = () => {
     return (
@@ -10,7 +11,8 @@ export const Conferencias = () => {
                         <div className="eventos__grid">
                             {
                                 conferencia.ponentes.map((ponente,i) => (
-                                    <div
+                                    <Link
+                                        to={"/event/ejemplo"}
                                         key={i} 
                                         className="evento">
                                         <p className="evento__hora">{ponente.hora}</p>
@@ -25,7 +27,7 @@ export const Conferencias = () => {
                                                 <p className="evento__autor-nombre">{ponente.name}</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))
                             }
                         </div>
