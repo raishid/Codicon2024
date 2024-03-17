@@ -58,20 +58,20 @@ export const Event = () => {
           <p>Dictadas por los mayores expertos en desarrollo web</p>
         </div>
       </div>
-      <div className="w-full flex justify-center h-full max-h-[620px] px-28	">
-        <section className="video w-[75%]">
+      <div className="w-full flex justify-around h-full max-h-[620px] px-28	">
+        <section className="video w-[60%]">
           {/* <video src="https://www.youtube.com/embed/XeYutMjMM6Y"></video> */}
           <iframe
-            className="w-full  h-full"
+            className="w-full  h-full rounded-3xl"
             src="https://www.youtube.com/embed/XeYutMjMM6Y"
             title="Mis 9 PELICULAS Favoritas Que Transcurren Entera O Parcialmente En AVIONES | #TeLoResumo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           >
           </iframe>
         </section>
-        <section className="chat w-[25%] bg-slate-800 ">
-          <h3 className="h-[10%] m-0 p-5 text-4xl text-white bg-slate-900 flex justify-center items-center">Chat</h3>
-          <section className="h-[85%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+        <section className="chat w-[25%] bg-slate-800 rounded-t-3xl">
+          <h3 className="h-[10%] m-0 p-5 text-4xl text-white bg-slate-900 flex justify-center items-center rounded-t-3xl">Chat</h3>
+          <section className="h-[85%] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200 pb-6 pt-4">
             {
               messages?.length && 
               messages.map((message:any, i:number) => (
@@ -79,17 +79,19 @@ export const Event = () => {
               ))
             }
           </section>
-          <section className="h-[5%] flex justify-center">
-            <input 
-              className="w-full p-3" 
-              type="text" 
+
+          <section className="flex justify-center items-center bg-slate-900 px-6 py-4 gap-4 rounded-b-lg">
+            <textarea 
+              className="w-full border-[#1E293B] p-2 focus:border-white border-2 h-[60px] rounded-b-lg" 
               placeholder="Enviar un mensaje"
-              value={newMessage} onChange={(e) => setNewMessage(e.target.value)} 
-              />
+              value={newMessage} onChange={(e) => setNewMessage(e.target.value)} >
+
+              </textarea>
             <button 
-              className="flex justify-center items-center rounded-none"
-              onClick={send}
-              >Enviar</button>
+              className="!bg-transparent"
+              onClick={send}>
+              Enviar
+            </button>
           </section>
         </section>
 
