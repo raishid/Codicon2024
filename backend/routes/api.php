@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ChatHistoryController;
-use App\Http\Controllers\StreamController;
 use Illuminate\Http\Request;
+use Illuminate\Auth\GenericUser;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Broadcast;
+use App\Http\Controllers\StreamController;
+use App\Http\Controllers\ChatHistoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +17,18 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+
+Route::post('/socket/auth', function () {
+  $user = new GenericUser(['id' => microtime()]);
+
+  request()->setUserResolver(function () use ($user) {
+    return $user;
+  });
+
+  return Broadcast::auth(request());
+});
+
 
 
 Route::get('/streams', [StreamController::class, 'index'])->name('stream.index');
