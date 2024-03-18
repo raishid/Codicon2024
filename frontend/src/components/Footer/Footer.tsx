@@ -6,7 +6,7 @@ export const Footer = () => {
                 <div className="footer__contenido">
                     <h3 className="footer__logo logo">&#60;TitanScript&#62;</h3>
 
-                    <p className="footer__texto">DevWebCamp es una conferencia para desarrolladores de todos los niveles, se lleva a cabo de forma presencial y en línea.</p>
+                    <p className="footer__texto">TitanScript es una conferencia para desarrolladores de todos los niveles, se lleva a cabo de forma presencial y en línea.</p>
                 </div>
 
                 <nav className="menu-redes">
